@@ -61,12 +61,12 @@ public class MainActivity extends Activity {
             TextView tv = new TextView(this);
             tv.setText("Player " + (players + 1) + ": " + lives.get(players));
             tv.setId(players);
-            ll.addView(tv);
-            int index = ll.indexOfChild(tv);
 
             LinearLayout buttonLayout = new LinearLayout(this);
             buttonLayout.setOrientation(LinearLayout.HORIZONTAL);
             buttonLayout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT, 1f));
+            tv.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT, 1f));
+            buttonLayout.addView(tv);
             initButton(new Button(this), "+", players, 1, buttonLayout);
             initButton(new Button(this), "-", players, -1, buttonLayout);
             initButton(new Button(this), "+5", players, 5, buttonLayout);
@@ -86,7 +86,7 @@ public class MainActivity extends Activity {
     public void removePlayer() {
         int players = lives.size();
         if (players > 2) { // minimum number of players is 2
-            ll.removeViews(players + 1, 2);
+            ll.removeViewAt(players);
             lives.remove(players - 1);
         } else {
             toastMin.show();
