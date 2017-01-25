@@ -1,11 +1,4 @@
 <resources>
     <string name="app_name">Life Counter</string>
-    <string name="str_add1">+</string>
-    <string name="str_subtract1">-</string>
-    <string name="str_add5">+5</string>
-    <string name="str_subtract5">-5</string>
-    <string name="str_p1">Player 1</string>
-    <string name="str_p2">Player 2</string>
-    <string name="str_p3">Player 3</string>
-    <string name="str_p4">Player 4</string>
+    <string name="str_add_player">Add Player</string>
 </resources>
